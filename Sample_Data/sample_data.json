@@ -1,0 +1,18 @@
+{
+    "users": [
+        {"user_id": 1, "name": "Alice", "email": "alice@example.com"},
+        {"user_id": 2, "name": "Bob", "email": "bob@example.com"},
+        {"user_id": 3, "name": "Charlie", "email": "charlie@example.com"}
+    ],
+    "products": [
+        {"product_id": 101, "name": "Laptop", "price": 1200.0},
+        {"product_id": 102, "name": "Phone", "price": 800.0},
+        {"product_id": 103, "name": "Headphones", "price": 150.0}
+    ],
+    "orders": [
+        {"order_id": 1001, "user_id": 1, "product_id": 101, "quantity": 1},
+        {"order_id": 1002, "user_id": 2, "product_id": 103, "quantity": 2},
+        {"order_id": 1003, "user_id": 3, "product_id": 102, "quantity": 1},
+        {"order_id": 1004, "user_id": 1, "product_id": 103, "quantity": 1}
+    ]
+}
