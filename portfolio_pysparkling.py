@@ -60,8 +60,8 @@ def read_file(
     """
     if fname is None:
         # Default to JSON or CSV
-        if os.path.exists("Sample_Data/sample_data.csv"):
-            fname = "Sample_Data/sample_data.csv"
+        if os.path.exists("Sample_Data/sample_products.csv"):
+            fname = "Sample_Data/sample_products.csv"
         elif os.path.exists("Sample_Data/sample_data.json"):
             fname = "Sample_Data/sample_data.json"
         else:
@@ -112,7 +112,7 @@ def extract_prices(df: pd.DataFrame) -> pd.Series:
 
 def extract_column(df: pd.DataFrame, column_name: str) -> pd.Series:
     """Extract and clean a numeric column from a CSV dataframe."""
-    series = df[column_name].replace("", 0).fillna(0).astype(int)
+    series = df[column_name].replace("", 0).fillna(0).astype(float)
     return series.sort_values()
 
 
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     elif ext == ".csv":
         header, *data = rows
         df = pd.DataFrame(data, columns=header)
-        series = extract_column(df, "ZoomInfo Number of Contacts")
+        series = extract_column(df, "price")
     else:
         raise ValueError("Unsupported file format for extraction")
 
