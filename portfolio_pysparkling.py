@@ -121,6 +121,8 @@ def extract_column(df: pd.DataFrame, column_name: str) -> pd.Series:
 # ======================
 def plot_statistics(series: pd.Series, title: str = "Data Distribution") -> None:
     """Plot histogram and log-transformed line plot."""
+    os.popen("mkdir -p Images/pysparkling")
+
     sns.set(style="whitegrid")
     fig1, ax1 = plt.subplots(figsize=(10, 4))
     sns.histplot(series, bins=20, kde=True, ax=ax1)
@@ -128,6 +130,7 @@ def plot_statistics(series: pd.Series, title: str = "Data Distribution") -> None
     ax1.set_xlabel("Value")
     ax1.set_ylabel("Frequency")
     fig1.tight_layout()
+    fig1.savefig(f"Images/pysparkling/sample_products_histogram.png", dpi=300)
     plt.show(block=False)
 
     fig2, ax2 = plt.subplots(figsize=(10, 4))
@@ -136,6 +139,7 @@ def plot_statistics(series: pd.Series, title: str = "Data Distribution") -> None
     ax2.set_xlabel("Index")
     ax2.set_ylabel("log10(1+Value)")
     fig2.tight_layout()
+    fig2.savefig(f"Images/pysparkling/sample_products_log.png", dpi=300)
     plt.show(block=True)
 
 
