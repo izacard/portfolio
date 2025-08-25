@@ -12,12 +12,12 @@
 <!-- TOC -->
 # Table of Contents
 - [A. Data Ingestion, Processing, and Visualization with PySpark and Pandas](#pyskarling)
-	- [Key Features](##pysparkling_key-features)
-	- [Code Structure] (##pysparkling_key-features)
-- [B. Advanced 3D visualization with myavi](#mayavi)
-	- [Key Features](##mayavi_key-features)
-	- [Code Structure] (##mayavi_code-structure)
-- [Why This is Portfolio-ready] (#portfolio-ready)
+	- [Key Features](#pysparkling-key-features)
+	- [Code Structure](#pysparkling-code-structure)
+- [B. Advanced 3D visualization with mayavi](#mayavi)
+	- [Key Features](#mayavi-key-features)
+	- [Code Structure](#mayavi-code-structure)
+- [Why This is Portfolio-ready](#portfolio-ready)
 <!-- END TOC -->
 
 <br><br>
@@ -36,7 +36,7 @@ This project demonstrates **data ingestion, processing, and visualization** usin
 
 --
 
-<h2 id="pysparkling_key-features">Key Features</h2>
+<h2 id="pysparkling-key-features">Key Features</h2>
 
 * **Flexible File Reading:** Handles both JSON and CSV formats.
 * **Partition Management:** Dynamically repartitions data for testing and scalability.
@@ -46,7 +46,7 @@ This project demonstrates **data ingestion, processing, and visualization** usin
 
 --
 
-<h2 id="pysparkling_code-structure">Code Structure</h2>
+<h2 id="pysparkling-code-structure">Code Structure</h2>
 
 
 ### 1. Imports
@@ -113,9 +113,11 @@ def plot_statistics(series: pd.Series, title: str = "Data Distribution") -> None
     fig2.tight_layout()
     plt.show(block=True)
 ```
-The resulting images from a sampe data are the following.
-<img src="Images/pysparkling/sample_products_histogram.png" alt="Histogram" width="400" style="display: block; margin: 0 auto;"/>
+The resulting images from a sampe data are the following.<br>
+<img src="Images/pysparkling/sample_products_histogram.png" alt="Histogram" width="400" style="display: block; margin: 0 auto;"/><br>
 <img src="Images/pysparkling/sample_products_log.png" alt="Log" width="400" style="display: block; margin: 0 auto;"/>
+<br>
+
 ### 6. Example Workflow
 
 a. **Run the script:**
@@ -155,7 +157,7 @@ It provides publication-quality figures for research, focusing on the gyrointegr
 
 --
 
-<h2 id="mayavi_key-features">Key Features</h2>
+<h2 id="mayavi-key-features">Key Features</h2>
 
 * **Publication-ready 3D visuals:** export high-resolution figures for papers.
 * **Modular plotting functions:** separate routines for particles, gyrointegrals, magnetic fields, and gyrocenters.
@@ -165,7 +167,7 @@ It provides publication-quality figures for research, focusing on the gyrointegr
 
 --
 
-<h2 id="mayavi_code-structure">Code Structure</h2>
+<h2 id="mayavi-code-structure">Code Structure</h2>
 
 ### 1. Configuration
 
@@ -203,7 +205,7 @@ It provides publication-quality figures for research, focusing on the gyrointegr
 * Clean up figure (mlab.clf) for reuse.
 
 The resulting image is the following.<br>
-<img src="Images/mayavi/mayavi_GI_3D_gyrointegral_000_crop.png" alt="Histogram" width="400" style="display: block; margin: 0 auto;"/>
+<img src="Images/mayavi/mayavi_GI_3D_gyrointegral_000_crop.png" alt="Gyrointegrated Kinetic Theory" width="400" style="display: block; margin: 0 auto;"/>
 <br>
 
 <br><br>
